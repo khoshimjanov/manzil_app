@@ -6,6 +6,7 @@ import 'package:manzil/auth/domain/role_model.dart';
 import 'package:manzil/auth/infrastructure/db_helper.dart';
 
 import 'package:manzil/core/domain/car_data_model.dart';
+import 'package:manzil/core/domain/district_model.dart';
 import 'package:manzil/core/domain/gender_model.dart';
 import 'package:manzil/core/domain/region_model.dart';
 import 'package:manzil/core/domain/user_model.dart';
@@ -33,6 +34,36 @@ class UserBloc extends Cubit<UserModel> {
 
   void signUp(String name) async {
     emit(state.copyWith(name: name));
+  }
+
+  void changeUserData({
+    String? name,
+    String? surname,
+    Gender? gender,
+    RegionModel? region,
+    String? phoneNumber,
+    Role? role,
+    String? id,
+    DateTime? birthday,
+    CarDataModel? carModel,
+    int? type,
+    String? code,
+    DistrictModel? district,
+  }) {
+    emit(state.copyWith(
+      name: name ?? state.name,
+      surname: surname ?? state.surname,
+      gender: gender ?? state.gender,
+      region: region ?? state.region,
+      phoneNumber: phoneNumber ?? state.phoneNumber,
+      role: role ?? state.role,
+      id: id ?? state.id,
+      birthday: birthday ?? state.birthday,
+      carmodel: carModel ?? state.carmodel,
+      type: type ?? state.type,
+      code: code ?? state.code,
+      district: district ?? state.district,
+    ));
   }
 
   void changeName(String name) async {
@@ -64,9 +95,7 @@ class UserBloc extends Cubit<UserModel> {
     String? phoneNumber,
     RegionModel? region,
   }) {
-    emit(state.copyWith(
-      phoneNumber: phoneNumber ?? state.phoneNumber
-    ));
+    emit(state.copyWith(phoneNumber: phoneNumber ?? state.phoneNumber));
   }
 
   void changeBirthday(DateTime date) async {
