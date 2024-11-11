@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 
-import 'package:manzil/core/infrastructure/extensions/context_extensions.dart';
 import 'package:manzil/core/presentation/style/colors.dart';
-
+import 'package:manzil/core/presentation/style/theme.dart';
 
 class SelectRoleWidget extends StatelessWidget {
   final bool isSelected;
@@ -43,7 +42,7 @@ class SelectRoleWidget extends StatelessWidget {
             const Gap(20),
             Text(
               title,
-              style: context.style.fontSize16Weight600,
+              style: AppStyles.fontSize16Weight600,
             ),
           ],
         ),

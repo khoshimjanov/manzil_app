@@ -5,7 +5,7 @@ plugins {
 }
 
 def localProperties = new Properties()
-def localPropertiesFile = rootProject.file('local.properties')
+def localPropertiesFile = rootProject.file('local.properties') 
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader ->
         localProperties.load(reader)
@@ -24,7 +24,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.manzil"
-    compileSdk flutter.compileSdkVersion
+    compileSdk 34
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -64,4 +64,7 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation 'com.yandex.android:maps.mobile:4.6.1-full'
+    // a061f0a9-9e1c-438d-a464-4f386b646e41
+}

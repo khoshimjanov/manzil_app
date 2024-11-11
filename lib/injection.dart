@@ -6,6 +6,7 @@
 // import 'package:flutter/services.dart';
 import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:manzil/auth/infrastructure/db_helper.dart';
 // import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 // import '/core/domain/app_config.dart';
@@ -32,6 +33,8 @@ class AppInjections with _$AppInjections {
 
 class Injection {
   Future<AppInjections> setUpInjection() async {
+      await DbHelper.initialize();
+  await DbHelper.openBoxes();
     // final configFile = await rootBundle.loadString('assets/config/main.json');
     // final configData = jsonDecode(configFile);
     // final appConfig = AppConfig(
@@ -65,7 +68,7 @@ class Injection {
     //       maxWidth: 120,
     //     ),
     //   );
-    // }
+    // }a
 
     return AppInjections(
       // appConfig: appConfig,
@@ -76,3 +79,4 @@ class Injection {
     );
   }
 }
+

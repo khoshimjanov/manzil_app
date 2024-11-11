@@ -1,0 +1,81 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'trip_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$TripModelImpl _$$TripModelImplFromJson(Map<String, dynamic> json) =>
+    _$TripModelImpl(
+      id: (json['id'] as num?)?.toInt() ?? 0,
+      ownerId: (json['owner_id'] as num?)?.toInt() ?? 0,
+      ownerType: (json['owner_type'] as num?)?.toInt() ?? 0,
+      type: (json['type'] as num?)?.toInt() ?? 0,
+      carId: (json['car_id'] as num?)?.toInt() ?? 0,
+      carClassId: (json['car_class_id'] as num?)?.toInt() ?? 0,
+      carTypeId: (json['car_type_id'] as num?)?.toInt() ?? 0,
+      experience: (json['driver_experience'] as num?)?.toInt() ?? 0,
+      fromCountryId: (json['from_country_id'] as num?)?.toInt() ?? 0,
+      fromRegionId: (json['from_region_id'] as num?)?.toInt() ?? 0,
+      fromDistrictId: (json['from_district_id'] as num?)?.toInt() ?? 0,
+      fromAddress: json['from_address'] as String? ?? '',
+      fromLatitude: json['from_latitude'] as String? ?? '',
+      fromLongitude: json['from_longitude'] as String? ?? '',
+      toCountryId: (json['to_country_id'] as num?)?.toInt() ?? 0,
+      toRegionId: (json['to_region_id'] as num?)?.toInt() ?? 0,
+      toDistrictId: (json['to_district_id'] as num?)?.toInt() ?? 0,
+      toAddress: json['to_address'] as String? ?? '',
+      toLatitude: json['to_latitude'] as String? ?? '',
+      toLongitude: json['to_longitude'] as String? ?? '',
+      weight: json['weight'] as String? ?? '',
+      date: json['date'] as String? ?? '',
+      fromTime: json['from_time'] as String? ?? '',
+      toTime: json['to_time'] as String? ?? '',
+      seats: (json['seats'] as num?)?.toInt() ?? 0,
+      comment: json['comment'] as String? ?? '',
+      status: (json['status'] as num?)?.toInt() ?? 0,
+      requests: (json['requests'] as num?)?.toInt() ?? 0,
+      name: json['name'] as String? ?? '',
+      surname: json['last_name'] as String? ?? '',
+      phone: (json['phone'] as num?)?.toInt() ?? 0,
+      number: json['number'] as String? ?? '',
+      rating: (json['rating'] as num?)?.toInt() ?? 0,
+    );
+
+Map<String, dynamic> _$$TripModelImplToJson(_$TripModelImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'owner_id': instance.ownerId,
+      'owner_type': instance.ownerType,
+      'type': instance.type,
+      'car_id': instance.carId,
+      'car_class_id': instance.carClassId,
+      'car_type_id': instance.carTypeId,
+      'driver_experience': instance.experience,
+      'from_country_id': instance.fromCountryId,
+      'from_region_id': instance.fromRegionId,
+      'from_district_id': instance.fromDistrictId,
+      'from_address': instance.fromAddress,
+      'from_latitude': instance.fromLatitude,
+      'from_longitude': instance.fromLongitude,
+      'to_country_id': instance.toCountryId,
+      'to_region_id': instance.toRegionId,
+      'to_district_id': instance.toDistrictId,
+      'to_address': instance.toAddress,
+      'to_latitude': instance.toLatitude,
+      'to_longitude': instance.toLongitude,
+      'weight': instance.weight,
+      'date': instance.date,
+      'from_time': instance.fromTime,
+      'to_time': instance.toTime,
+      'seats': instance.seats,
+      'comment': instance.comment,
+      'status': instance.status,
+      'requests': instance.requests,
+      'name': instance.name,
+      'last_name': instance.surname,
+      'phone': instance.phone,
+      'number': instance.number,
+      'rating': instance.rating,
+    };

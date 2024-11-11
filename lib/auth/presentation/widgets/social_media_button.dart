@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:manzil/core/infrastructure/extensions/context_extensions.dart';
+import 'package:manzil/core/presentation/style/colors.dart';
+import 'package:manzil/core/presentation/style/theme.dart';
 
 class SocialMediaButton extends StatelessWidget {
   final String icon;
@@ -28,8 +29,8 @@ class SocialMediaButton extends StatelessWidget {
             const Gap(8),
             Text(
               title,
-              style: context.style.fontSize14Weight400
-                  .copyWith(color: context.colors.black),
+              style: AppStyles.fontSize14Weight400
+                  .copyWith(color: AppColors.black),
             )
           ],
         ),

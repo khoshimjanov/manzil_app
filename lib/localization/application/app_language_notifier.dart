@@ -1,5 +1,6 @@
-import 'dart:ui';
+// import 'dart:ui';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:manzil/localization/domain/language_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -35,7 +36,6 @@ class  LocaleNotifier extends StateNotifier<Locale> {
     } else {
       await _prefs.setString(languageCode, 'uz');
       state = localeUz;
-    }
-    
+    } 
   }
 }
