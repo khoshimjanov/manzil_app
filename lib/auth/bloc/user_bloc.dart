@@ -36,7 +36,7 @@ class UserBloc extends Cubit<UserModel> {
     emit(state.copyWith(name: name));
   }
 
-  void changeUserData({
+  void changeUserData({       
     String? name,
     String? surname,
     Gender? gender,
